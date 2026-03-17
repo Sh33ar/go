@@ -1,69 +1,196 @@
 <!DOCTYPE html>
-<html dir="rtl">
+
+<html lang="ar" dir="rtl">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مؤسسة نديم</title>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RWD0WHS7EV"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-RWD0WHS7EV');
-</script>
+<meta name="theme-color" content="#0C4F57">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Arial;background:linear-gradient(135deg,#e6f1f3,#f9fcfd);}
-.logo img{width:120px;margin-top:30px;border-radius:50%;box-shadow:0 10px 30px rgba(0,0,0,.15);}
-h2{color:#0C4F57;}
-.container{max-width:420px;margin:auto;padding:20px;text-align:center;}
-.btn{
-display:flex;align-items:center;justify-content:center;
-background:white;padding:16px;margin:12px 0;border-radius:18px;
-text-decoration:none;color:#0C4F57;font-weight:bold;
-box-shadow:0 8px 20px rgba(0,0,0,.08);transition:.3s;
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:'Cairo',system-ui;
+background:linear-gradient(135deg,#eef7f8,#ffffff);
+min-height:100vh;
+display:flex;
+justify-content:center;
 }
-.btn:hover{transform:scale(1.05);}
-.donate{background:#ff7a00;color:white;font-size:18px;}
-.lang{margin-top:20px;display:inline-block;color:#666;text-decoration:none;}
+
+/* Loader */
+
+.loader{
+position:fixed;
+inset:0;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.loader img{
+width:95px;
+animation:spin 1.8s linear infinite;
+}
+
+@keyframes spin{
+to{transform:rotate(360deg)}
+}
+
+.wrapper{
+width:100%;
+max-width:460px;
+padding:40px 18px 50px;
+text-align:center;
+animation:fade .7s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1}
+}
+
+/* Logo */
+
+.logo img{
+width:270px;
+max-width:90%;
+filter:drop-shadow(0 25px 40px rgba(0,0,0,.15));
+margin-bottom:10px;
+}
+
+/* Card */
+
+.card{
+background:white;
+border-radius:26px;
+padding:20px;
+box-shadow:0 18px 45px rgba(0,0,0,.12);
+margin-top:15px;
+}
+
+/* Buttons */
+
+.btn{
+display:block;
+text-decoration:none;
+padding:17px;
+margin:12px 0;
+border-radius:18px;
+font-weight:700;
+font-size:16px;
+color:#0C4F57;
+background:#f7fbfb;
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+transition:.25s;
+}
+
+.btn:active{
+transform:scale(.97);
+}
+
+.btn:hover{
+background:white;
+box-shadow:0 15px 28px rgba(0,0,0,.15);
+}
+
+.donate{
+background:linear-gradient(45deg,#ff6a00,#ff9c35);
+color:white;
+font-size:18px;
+}
+
+/* Map */
+
+.map{
+margin-top:16px;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.map iframe{
+width:100%;
+height:170px;
+border:0;
+}
+
+/* Tools */
+
+.tools{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.tool{
+flex:1;
+background:#f4f7f7;
+padding:12px;
+border-radius:14px;
+font-size:14px;
+text-decoration:none;
+color:#333;
+box-shadow:0 6px 14px rgba(0,0,0,.08);
+}
+
+.footer{
+margin-top:20px;
+font-size:13px;
+color:#888;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="loader" id="loader">
+<img src="https://raw.githubusercontent.com/Sh33ar/https-github.com-/main/NADIM%20LOGO.png">
+</div>
+
+<div class="wrapper">
 
 <div class="logo">
 <img src="https://raw.githubusercontent.com/Sh33ar/https-github.com-/main/NADIM%20LOGO.png">
 </div>
 
-<h2>مؤسسة نديم</h2>
+<div class="card">
 
-<a class="btn donate" href="https://www.nadimfoundation.org/"
-onclick="gtag('event','click_donate_ar')">❤️ الموقع الرسمي</a>
+<a class="btn donate" href="https://www.nadimfoundation.org/">💖 تبرع الآن</a>
 
-<a class="btn" href="https://www.facebook.com/share/1Ak98MWsP4/"
-onclick="gtag('event','click_facebook_ar')">📘 فيسبوك</a>
+<a class="btn" href="https://www.facebook.com/share/1Ak98MWsP4/">📘 فيسبوك</a> <a class="btn" href="https://www.instagram.com/nadimfoundation?igsh=MTVraHY1cnlvOWZzYQ==">📸 انستجرام</a> <a class="btn" href="https://www.youtube.com/channel/UCkTYJGluhZ36xbojMuXnKTA">▶ يوتيوب</a> <a class="btn" href="https://wa.me/201227799564">💬 واتساب</a> <a class="btn" href="mailto:info@nadimfoundation.org">✉️ البريد الإلكتروني</a> <a class="btn" href="https://www.linkedin.com/company/nadimfoundation/">💼 لينكدإن</a>
 
-<a class="btn" href="https://www.instagram.com/nadimfoundation?igsh=MTVraHY1cnlvOWZzYQ=="
-onclick="gtag('event','click_instagram_ar')">📸 انستجرام</a>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=nadim%20foundation%20cairo&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
 
-<a class="btn" href="https://www.youtube.com/channel/UCkTYJGluhZ36xbojMuXnKTA"
-onclick="gtag('event','click_youtube_ar')">▶ يوتيوب</a>
-
-<a class="btn" href="https://wa.me/201227799564"
-onclick="gtag('event','click_whatsapp_ar')">💬 واتساب</a>
-
-<a class="btn" href="mailto:info@nadimfoundation.org"
-onclick="gtag('event','click_email_ar')">✉️ بريد إلكتروني</a>
-
-<a class="btn" href="https://www.linkedin.com/company/nadimfoundation/"
-onclick="gtag('event','click_linkedin_ar')">💼 لينكدإن</a>
-
-<a class="lang" href="en.html">🌐 English</a>
+<div class="tools">
+<a class="tool" href="tel:+201227799564">📲 حفظ الرقم</a>
+<a class="tool" href="https://wa.me/?text=https://sh33ar.github.io/go/">🔗 مشاركة</a>
+</div>
 
 </div>
+
+<div class="footer">© Nadim Foundation</div>
+
+</div>
+
+<script>
+window.onload=function(){
+document.getElementById("loader").style.display="none";
+}
+</script>
 
 </body>
 </html>
