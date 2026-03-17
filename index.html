@@ -1,14 +1,18 @@
 <!DOCTYPE html>
+
 <html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nadim</title>
 <script>
-
 var lang = navigator.language || navigator.userLanguage;
-
-if(lang.startsWith('ar')){
-window.location.href = "ar.html";
+if(lang && lang.startsWith("ar")){
+location.replace("ar.html");
 }else{
-window.location.href = "en.html";
+location.replace("en.html");
 }
-
 </script>
+</head>
+<body></body>
 </html>
