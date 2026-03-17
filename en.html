@@ -14,54 +14,162 @@ gtag('config', 'G-RWD0WHS7EV');
 </script>
 
 <style>
-body{margin:0;font-family:Arial;background:linear-gradient(135deg,#e6f1f3,#f9fcfd);}
-.logo img{width:120px;margin-top:30px;border-radius:50%;box-shadow:0 10px 30px rgba(0,0,0,.15);}
-h2{color:#0C4F57;}
-.container{max-width:420px;margin:auto;padding:20px;text-align:center;}
-.btn{
-display:flex;align-items:center;justify-content:center;
-background:white;padding:16px;margin:12px 0;border-radius:18px;
-text-decoration:none;color:#0C4F57;font-weight:bold;
-box-shadow:0 8px 20px rgba(0,0,0,.08);transition:.3s;
+
+body{
+margin:0;
+font-family:system-ui;
+background:linear-gradient(140deg,#eaf4f6,#fdfefe);
+display:flex;
+justify-content:center;
 }
-.btn:hover{transform:scale(1.05);}
-.donate{background:#ff7a00;color:white;font-size:18px;}
-.lang{margin-top:20px;display:inline-block;color:#666;text-decoration:none;}
+
+.wrapper{
+width:100%;
+max-width:460px;
+padding:30px 18px 40px;
+text-align:center;
+animation:fade .7s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(25px)}
+to{opacity:1}
+}
+
+/* Logo */
+
+.logo{
+margin-top:25px;
+margin-bottom:25px;
+}
+
+.logo img{
+width:270px;
+max-width:90%;
+filter:drop-shadow(0 18px 35px rgba(0,0,0,0.15));
+animation:logoIn 1s ease;
+}
+
+@keyframes logoIn{
+from{opacity:0;transform:scale(.9)}
+to{opacity:1}
+}
+
+/* Buttons */
+
+.card{
+background:rgba(255,255,255,.7);
+backdrop-filter:blur(14px);
+border-radius:22px;
+padding:18px;
+box-shadow:0 18px 35px rgba(0,0,0,0.08);
+}
+
+.btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+padding:16px;
+margin:12px 0;
+border-radius:16px;
+text-decoration:none;
+font-weight:600;
+color:#0C4F57;
+background:white;
+box-shadow:0 6px 16px rgba(0,0,0,.08);
+transition:.28s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 16px 26px rgba(0,0,0,.15);
+}
+
+/* Main Button */
+
+.primary{
+background:#ff7a00;
+color:white;
+font-size:18px;
+}
+
+.lang{
+margin-top:22px;
+display:inline-block;
+color:#666;
+text-decoration:none;
+font-size:15px;
+}
+
+.footer{
+margin-top:18px;
+font-size:13px;
+color:#888;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
 <div class="logo">
 <img src="https://raw.githubusercontent.com/Sh33ar/https-github.com-/main/NADIM%20LOGO.png">
 </div>
 
-<h2>Nadim Foundation</h2>
+<div class="card">
 
-<a class="btn donate" href="https://www.nadimfoundation.org/"
-onclick="gtag('event','click_donate_en')">❤️ Official Website</a>
+<a class="btn primary"
+href="https://www.nadimfoundation.org/"
+onclick="gtag('event','website_click_en')">
+❤️ Official Website
+</a>
 
-<a class="btn" href="https://www.facebook.com/share/1Ak98MWsP4/"
-onclick="gtag('event','click_facebook_en')">📘 Facebook</a>
+<a class="btn"
+href="https://www.facebook.com/share/1Ak98MWsP4/"
+onclick="gtag('event','facebook_click_en')">
+📘 Facebook
+</a>
 
-<a class="btn" href="https://www.instagram.com/nadimfoundation?igsh=MTVraHY1cnlvOWZzYQ=="
-onclick="gtag('event','click_instagram_en')">📸 Instagram</a>
+<a class="btn"
+href="https://www.instagram.com/nadimfoundation?igsh=MTVraHY1cnlvOWZzYQ=="
+onclick="gtag('event','instagram_click_en')">
+📸 Instagram
+</a>
 
-<a class="btn" href="https://www.youtube.com/channel/UCkTYJGluhZ36xbojMuXnKTA"
-onclick="gtag('event','click_youtube_en')">▶ YouTube</a>
+<a class="btn"
+href="https://www.youtube.com/channel/UCkTYJGluhZ36xbojMuXnKTA"
+onclick="gtag('event','youtube_click_en')">
+▶ YouTube
+</a>
 
-<a class="btn" href="https://wa.me/201227799564"
-onclick="gtag('event','click_whatsapp_en')">💬 WhatsApp</a>
+<a class="btn"
+href="https://wa.me/201227799564"
+onclick="gtag('event','whatsapp_click_en')">
+💬 WhatsApp
+</a>
 
-<a class="btn" href="mailto:info@nadimfoundation.org"
-onclick="gtag('event','click_email_en')">✉️ Email</a>
+<a class="btn"
+href="mailto:info@nadimfoundation.org"
+onclick="gtag('event','email_click_en')">
+✉️ Email
+</a>
 
-<a class="btn" href="https://www.linkedin.com/company/nadimfoundation/"
-onclick="gtag('event','click_linkedin_en')">💼 LinkedIn</a>
+<a class="btn"
+href="https://www.linkedin.com/company/nadimfoundation/"
+onclick="gtag('event','linkedin_click_en')">
+💼 LinkedIn
+</a>
+
+</div>
 
 <a class="lang" href="ar.html">🌐 عربي</a>
+
+<div class="footer">
+© Nadim Foundation
+</div>
 
 </div>
 
