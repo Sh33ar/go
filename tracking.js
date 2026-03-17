@@ -1,20 +1,24 @@
-// ===== Advanced Tracking System =====
+// PAGE VIEW
+gtag('event','page_view',{
+page_title:document.title
+});
 
-// QR Scan Event
+// QR SCAN
 gtag('event','qr_scan',{
 event_category:'engagement'
 });
 
-// Time on Page
+// TIME ON PAGE
 let startTime = Date.now();
 window.addEventListener("beforeunload", function(){
-let timeSpent = Math.round((Date.now() - startTime)/1000);
+let seconds = Math.round((Date.now() - startTime) / 1000);
 gtag('event','time_on_page',{
-value:timeSpent
+event_category:'engagement',
+value:seconds
 });
 });
 
-// Scroll Depth
+// SCROLL DEPTH
 let scrollTracked = false;
 window.addEventListener("scroll", function(){
 let scrolled = window.scrollY + window.innerHeight;
@@ -22,17 +26,8 @@ let height = document.body.scrollHeight;
 
 if(!scrollTracked && scrolled > height * 0.6){
 scrollTracked = true;
-gtag('event','scroll_60');
+gtag('event','scroll_60',{
+event_category:'engagement'
+});
 }
-});
-
-// Device Type
-let device = /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop";
-gtag('event','device_detected',{
-event_label:device
-});
-
-// Language
-gtag('event','language',{
-event_label:navigator.language
 });
