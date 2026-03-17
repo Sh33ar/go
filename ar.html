@@ -7,10 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مؤسسة نديم</title>
 
-<meta name="theme-color" content="#0C4F57">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,103 +16,90 @@
 body{
 margin:0;
 font-family:'Cairo',system-ui;
-background:linear-gradient(135deg,#eef7f8,#ffffff);
+background:linear-gradient(120deg,#eef7f8,#ffffff);
 min-height:100vh;
-display:flex;
-justify-content:center;
+overflow-x:hidden;
 }
 
-/* Loader */
+/* Hero */
 
-.loader{
-position:fixed;
-inset:0;
-background:white;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:999;
-}
-
-.loader img{
-width:95px;
-animation:spin 1.8s linear infinite;
-}
-
-@keyframes spin{
-to{transform:rotate(360deg)}
-}
-
-.wrapper{
-width:100%;
-max-width:460px;
-padding:40px 18px 50px;
+.hero{
 text-align:center;
-animation:fade .7s ease;
+padding:40px 20px 10px;
+animation:fade 1s ease;
 }
 
 @keyframes fade{
-from{opacity:0;transform:translateY(20px)}
+from{opacity:0;transform:translateY(30px)}
 to{opacity:1}
 }
 
-/* Logo */
-
-.logo img{
-width:270px;
+.hero img{
+width:280px;
 max-width:90%;
-filter:drop-shadow(0 25px 40px rgba(0,0,0,.15));
-margin-bottom:10px;
+filter:drop-shadow(0 30px 50px rgba(0,0,0,.15));
 }
 
 /* Card */
 
 .card{
+max-width:460px;
+margin:15px auto;
 background:white;
-border-radius:26px;
+border-radius:28px;
 padding:20px;
-box-shadow:0 18px 45px rgba(0,0,0,.12);
-margin-top:15px;
+box-shadow:0 25px 60px rgba(0,0,0,.12);
 }
 
 /* Buttons */
 
 .btn{
-display:block;
-text-decoration:none;
-padding:17px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:18px;
 margin:12px 0;
-border-radius:18px;
-font-weight:700;
+border-radius:20px;
+text-decoration:none;
+font-weight:800;
 font-size:16px;
 color:#0C4F57;
 background:#f7fbfb;
-box-shadow:0 8px 18px rgba(0,0,0,.08);
+box-shadow:0 12px 24px rgba(0,0,0,.12);
 transition:.25s;
 }
 
-.btn:active{
-transform:scale(.97);
-}
-
 .btn:hover{
-background:white;
-box-shadow:0 15px 28px rgba(0,0,0,.15);
+transform:translateY(-4px);
+box-shadow:0 22px 35px rgba(0,0,0,.18);
 }
 
-.donate{
-background:linear-gradient(45deg,#ff6a00,#ff9c35);
+/* Floating WhatsApp */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
 color:white;
-font-size:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+z-index:99;
 }
 
 /* Map */
 
 .map{
-margin-top:16px;
+margin-top:15px;
 border-radius:18px;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.12);
 }
 
 .map iframe{
@@ -124,29 +108,18 @@ height:170px;
 border:0;
 }
 
-/* Tools */
-
-.tools{
-display:flex;
-gap:10px;
+.counter{
+text-align:center;
 margin-top:15px;
-}
-
-.tool{
-flex:1;
-background:#f4f7f7;
-padding:12px;
-border-radius:14px;
 font-size:14px;
-text-decoration:none;
-color:#333;
-box-shadow:0 6px 14px rgba(0,0,0,.08);
+color:#888;
 }
 
 .footer{
-margin-top:20px;
-font-size:13px;
+text-align:center;
+margin:25px 0 40px;
 color:#888;
+font-size:13px;
 }
 
 </style>
@@ -155,41 +128,48 @@ color:#888;
 
 <body>
 
-<div class="loader" id="loader">
-<img src="https://raw.githubusercontent.com/Sh33ar/https-github.com-/main/NADIM%20LOGO.png">
-</div>
-
-<div class="wrapper">
-
-<div class="logo">
+<div class="hero">
 <img src="https://raw.githubusercontent.com/Sh33ar/https-github.com-/main/NADIM%20LOGO.png">
 </div>
 
 <div class="card">
 
-<a class="btn donate" href="https://www.nadimfoundation.org/">💖 تبرع الآن</a>
-
-<a class="btn" href="https://www.facebook.com/share/1Ak98MWsP4/">📘 فيسبوك</a> <a class="btn" href="https://www.instagram.com/nadimfoundation?igsh=MTVraHY1cnlvOWZzYQ==">📸 انستجرام</a> <a class="btn" href="https://www.youtube.com/channel/UCkTYJGluhZ36xbojMuXnKTA">▶ يوتيوب</a> <a class="btn" href="https://wa.me/201227799564">💬 واتساب</a> <a class="btn" href="mailto:info@nadimfoundation.org">✉️ البريد الإلكتروني</a> <a class="btn" href="https://www.linkedin.com/company/nadimfoundation/">💼 لينكدإن</a>
+<a class="btn" href="https://www.nadimfoundation.org/">🌐 الموقع الرسمي</a> <a class="btn" href="https://www.facebook.com/share/1Ak98MWsP4/">📘 فيسبوك</a> <a class="btn" href="https://www.instagram.com/nadimfoundation?igsh=MTVraHY1cnlvOWZzYQ==">📸 انستجرام</a> <a class="btn" href="https://www.youtube.com/channel/UCkTYJGluhZ36xbojMuXnKTA">▶ يوتيوب</a> <a class="btn" href="mailto:info@nadimfoundation.org">✉️ البريد الإلكتروني</a> <a class="btn" href="https://www.linkedin.com/company/nadimfoundation/">💼 لينكدإن</a>
 
 <div class="map">
 <iframe src="https://maps.google.com/maps?q=nadim%20foundation%20cairo&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
 </div>
 
-<div class="tools">
-<a class="tool" href="tel:+201227799564">📲 حفظ الرقم</a>
-<a class="tool" href="https://wa.me/?text=https://sh33ar.github.io/go/">🔗 مشاركة</a>
-</div>
+<button class="btn" onclick="share()">🔗 مشاركة الصفحة</button>
+
+<div class="counter" id="visits"></div>
 
 </div>
 
-<div class="footer">© Nadim Foundation</div>
+<a class="whatsapp" href="https://wa.me/201227799564">💬</a>
 
+<div class="footer">
+Digital Operations Platform — Nadim Foundation
 </div>
 
 <script>
-window.onload=function(){
-document.getElementById("loader").style.display="none";
+
+function share(){
+if(navigator.share){
+navigator.share({
+title:"Nadim Foundation",
+url:window.location.href
+});
+}else{
+alert("المشاركة غير مدعومة");
 }
+}
+
+let c = localStorage.getItem("visits") || 0;
+c++;
+localStorage.setItem("visits",c);
+document.getElementById("visits").innerHTML="عدد زياراتك: "+c;
+
 </script>
 
 </body>
