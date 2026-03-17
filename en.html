@@ -1,61 +1,128 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nadim Foundation</title>
 
-<!-- نفس HEAD -->
-
 <style>
-/* نفس CSS بالكامل */
-</style>
 
+body{
+margin:0;
+font-family:Arial;
+background:#f4f7f8;
+color:#0c4f57;
+text-align:center;
+}
+
+.hero{
+padding:60px 20px 40px;
+background:linear-gradient(-45deg,#0c4f57,#0f6c75,#148b96,#0c4f57);
+background-size:400% 400%;
+animation:gradient 12s ease infinite;
+color:white;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.logo{
+width:260px;
+max-width:90%;
+margin-top:20px;
+opacity:0;
+transform:translateY(30px);
+animation:fadeLogo 1.5s forwards;
+}
+
+@keyframes fadeLogo{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.container{
+padding:20px;
+}
+
+.btn{
+display:block;
+background:white;
+margin:12px auto;
+padding:16px;
+border-radius:18px;
+text-decoration:none;
+color:#0c4f57;
+width:90%;
+max-width:420px;
+font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.04);
+}
+
+.map{
+margin-top:20px;
+border-radius:20px;
+overflow:hidden;
+width:90%;
+max-width:420px;
+height:160px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.footer{
+margin-top:25px;
+font-size:14px;
+opacity:.6;
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="hero">
-
-<div class="particles">
-<span style="left:10%;animation-duration:10s"></span>
-<span style="left:25%;animation-duration:14s"></span>
-<span style="left:40%;animation-duration:12s"></span>
-<span style="left:60%;animation-duration:16s"></span>
-<span style="left:80%;animation-duration:13s"></span>
+<img class="logo" src="https://raw.githubusercontent.com/Sh33ar/https-github.com-/main/NADIM%20LOGO.png">
 </div>
 
-<div class="logoBox">
-<img id="logo" src="../assets/logo-light.png">
-</div>
+<div class="container">
 
-</div>
+<a class="btn" href="https://www.nadimfoundation.org/">Official Website</a>
 
-<div class="card">
+<a class="btn" href="https://www.facebook.com/share/1Ak98MWsP4/">Facebook</a>
 
-<a class="btn" onclick="track('click_website')" href="https://www.nadimfoundation.org/">🌐 Website</a> <a class="btn" onclick="track('click_facebook')" href="https://www.facebook.com/share/1Ak98MWsP4/">📘 Facebook</a> <a class="btn" onclick="track('click_instagram')" href="https://www.instagram.com/nadimfoundation?igsh=MTVraHY1cnlvOWZzYQ==">📸 Instagram</a> <a class="btn" onclick="track('click_youtube')" href="https://www.youtube.com/channel/UCkTYJGluhZ36xbojMuXnKTA">▶ YouTube</a> <a class="btn" onclick="track('click_email')" href="mailto:info@nadimfoundation.org">✉️ Email</a> <a class="btn" onclick="track('click_linkedin')" href="https://www.linkedin.com/company/nadimfoundation/">💼 LinkedIn</a>
+<a class="btn" href="https://www.instagram.com/nadimfoundation?igsh=MTVraHY1cnlvOWZzYQ==">Instagram</a>
+
+<a class="btn" href="https://www.youtube.com/channel/UCkTYJGluhZ36xbojMuXnKTA">YouTube</a>
+
+<a class="btn" href="https://wa.me/201227799564">WhatsApp</a>
+
+<a class="btn" href="mailto:info@nadimfoundation.org">Email</a>
+
+<a class="btn" href="https://www.linkedin.com/company/nadimfoundation/">LinkedIn</a>
 
 <div class="map">
-<iframe src="https://maps.google.com/maps?q=nadim%20foundation%20cairo&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+<iframe src="https://maps.google.com/maps?q=cairo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="100%" frameborder="0"></iframe>
 </div>
 
-<button class="btn" onclick="share()">🔗 Share</button>
+<a class="btn" href="ar.html">🌐 عربي</a>
 
-<div class="topTools">
-<a class="toolBtn" href="ar.html">🌐 عربي</a>
-<div class="toolBtn" onclick="toggleTheme()">🌙 Theme</div>
+<div class="footer">
+Nadim Foundation © ®
 </div>
 
 </div>
-
-<a class="whatsapp" onclick="track('click_whatsapp')" href="https://wa.me/201227799564">💬</a>
-
-<div class="footer">Nadim Foundation © ®</div>
-
-<script>
-/* نفس JS */
-</script>
 
 </body>
 </html>
